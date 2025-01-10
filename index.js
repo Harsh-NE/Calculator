@@ -1,0 +1,96 @@
+document.getElementById("openbrac").innerHTML="(";
+document.getElementById("closebrac").innerHTML=")";
+document.getElementById("1b").onclick=function()
+{
+    document.getElementById("text").innerHTML+="1";
+}
+document.getElementById("2b").onclick=function()
+{
+    document.getElementById("text").innerHTML+="2";
+}
+document.getElementById("3b").onclick=function()
+{
+    document.getElementById("text").innerHTML+="3";
+}
+document.getElementById("4b").onclick=function()
+{
+    document.getElementById("text").innerHTML+="4";
+}
+document.getElementById("5b").onclick=function()
+{
+    document.getElementById("text").innerHTML+="5";
+}
+document.getElementById("6b").onclick=function()
+{
+    document.getElementById("text").innerHTML+="6";
+}
+document.getElementById("7b").onclick=function()
+{
+    document.getElementById("text").innerHTML+="7";
+}
+document.getElementById("8b").onclick=function()
+{
+    document.getElementById("text").innerHTML+="8";
+}
+document.getElementById("9b").onclick=function()
+{
+    document.getElementById("text").innerHTML+="9";
+}
+document.getElementById("0b").onclick=function()
+{
+    document.getElementById("text").innerHTML+="0";
+}
+document.getElementById("+b").onclick=function()
+{
+    document.getElementById("text").innerHTML+="+";
+}
+document.getElementById("-b").onclick=function()
+{
+    document.getElementById("text").innerHTML+="-";
+}
+document.getElementById("xb").onclick=function()
+{
+    document.getElementById("text").innerHTML+="x";
+}
+document.getElementById("/b").onclick=function()
+{
+    document.getElementById("text").innerHTML+="/";
+}
+document.getElementById(".b").onclick=function()
+{
+    document.getElementById("text").innerHTML+=".";
+}
+document.getElementById("openbrac").onclick=function()
+{
+    document.getElementById("text").innerHTML+="(";
+}
+document.getElementById("closebrac").onclick=function()
+{
+    document.getElementById("text").innerHTML+=")";
+}
+document.getElementById("Cb").onclick=function()
+{
+    var el = document.getElementById("text");
+    text = (el.innerText || el.textContent);
+    document.getElementById("text").innerHTML=text.substring(0,text.length-1);
+}
+document.getElementById("ACb").onclick=function()
+{
+    document.getElementById("text").innerHTML="";
+}
+document.getElementById("=b").onclick=function()
+{
+    var el = document.getElementById("text");
+    text = (el.innerText || el.textContent);
+    console.log(text);
+    text=String(text);
+    text=text.split("x").join("*");
+    console.log(text);
+    try {
+        let val=eval(text);
+        document.getElementById("text").innerHTML=val;
+    } catch {
+        document.getElementById("text").innerHTML="Error";
+
+    }       
+}
